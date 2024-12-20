@@ -80,6 +80,7 @@ sudo apt-get install -y tmux
 sudo apt-get install -y i3
 sudo apt-get install -y nitrogen
 sudo apt-get install -y dmenu
+sudo apt-get install -y rofi
 sudo apt-get install -y policykit-1-gnome
 
 # ---
