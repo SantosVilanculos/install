@@ -9,7 +9,7 @@ sudo apt-get clean -y
 sudo service packagekit restart
 
 # ---
-sudo apt-get install -y tmux software-properties-common build-essential git curl wget zip unzip net-tools
+sudo apt-get install -y --ignore-missing tmux software-properties-common build-essential git curl wget zip unzip net-tools openssh-server
 
 # ---
 cd "/tmp"
