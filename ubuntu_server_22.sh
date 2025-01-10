@@ -22,12 +22,11 @@ cd "/tmp"
 wget https://github.com/axllent/mailpit/releases/download/v1.21.1/mailpit-linux-amd64.tar.gz -O "./mailpit-linux-amd64.tar.gz"
 mkdir -p ./mailpit-linux-amd64
 tar -xf ./mailpit-linux-amd64.tar.gz -C ./mailpit-linux-amd64
-sudo mv ./mailpit-linux-amd64/mailpit /usr/local/bin
+sudo mv ./mailpit-linux-amd64/mailpit /usr/local/bin/mailpit
 rm -rf ./mailpit-linux-amd64 ./mailpit-linux-amd64.tar.gz
 sudo chmod +x /usr/local/bin/mailpit
 cd -
 
-# ---
 cat <<'EOF' | sudo tee /etc/systemd/system/mailpit.service
 [Unit]
 Description=Mailpit is an email testing tool for developers
@@ -101,6 +100,4 @@ sudo ufw allow 22
 sudo ufw allow 80
 sudo ufw allow 443
 sudo ufw allow 3306
-
-# ---
 sudo ufw --force enable
