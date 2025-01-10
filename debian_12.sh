@@ -101,6 +101,7 @@ sudo apt-get install -y ffmpeg
 sudo apt-get install -y vlc
 sudo apt-get install -y maim
 
+sudo apt-get install -y fzf
 sudo apt-get install -y xsel
 sudo apt-get install -y xclip
 sudo apt-get install -y libnss3-tools
