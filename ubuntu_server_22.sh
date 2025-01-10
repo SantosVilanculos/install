@@ -70,29 +70,28 @@ sudo sed -i 's/^bind-address\s*=\s*127\.0\.0\.1/bind-address = 0.0.0.0/' /etc/my
 sudo systemctl restart mariadb
 
 # ---
-sudo mkdir -p /var/www/laravel
-echo "<?php phpinfo();" | sudo tee /var/www/laravel/index.php
-sudo chown -R www-data:www-data /var/www/laravel
-sudo chmod -R 755 /var/www/laravel
+sudo mkdir -p /var/www/php
+echo "<?php phpinfo();" | sudo tee /var/www/php/index.php
+sudo chown -R www-data:www-data /var/www/php
+sudo chmod -R 755 /var/www/php
 
-# ---
-cat <<'EOF' | sudo tee /etc/apache2/sites-available/laravel.conf
+cat <<'EOF' | sudo tee /etc/apache2/sites-available/php.conf
 <VirtualHost *:80>
-    DocumentRoot /var/www/laravel
+    DocumentRoot /var/www/php
 
-    <Directory /var/www/laravel>
+    <Directory /var/www/php>
             Options -Indexes +FollowSymLinks +MultiViews
             AllowOverride All
             Require all granted
     </Directory>
 
-    ErrorLog ${APACHE_LOG_DIR}/laravel.error.log
-    CustomLog ${APACHE_LOG_DIR}/laravel.custom.log combined
+    ErrorLog ${APACHE_LOG_DIR}/php.error.log
+    CustomLog ${APACHE_LOG_DIR}/php.custom.log combined
 </VirtualHost>
 EOF
 
 sudo a2dissite 000-default.conf
-sudo a2ensite laravel.conf
+sudo a2ensite php.conf
 sudo systemctl restart apache2
 
 # ---
