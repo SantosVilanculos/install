@@ -35,11 +35,7 @@ sudo apt-get clean -y
 sudo service packagekit restart
 
 # ---
-cd "/tmp"
-
-touch ./sources.list
-
-cat <<'EOF' >>./sources.list
+cat <<'EOF' | sudo tee /etc/apt/sources.list
 deb http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
 deb-src http://deb.debian.org/debian bookworm main contrib non-free non-free-firmware
 
@@ -49,10 +45,6 @@ deb-src http://security.debian.org/debian-security bookworm-security main contri
 deb http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
 deb-src http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
 EOF
-
-sudo mv ./sources.list /etc/apt/sources.list
-
-cd -
 
 # ---
 sudo apt-get update
