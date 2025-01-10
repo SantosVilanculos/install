@@ -70,16 +70,16 @@ sudo sed -i 's/^bind-address\s*=\s*127\.0\.0\.1/bind-address = 0.0.0.0/' /etc/my
 sudo systemctl restart mariadb
 
 # ---
-sudo mkdir -p /var/www/php
-echo "<?php phpinfo();" | sudo tee /var/www/php/index.php
+sudo mkdir -p /var/www/php/public
+echo "<?php phpinfo();" | sudo tee /var/www/php/public/index.php
 sudo chown -R www-data:www-data /var/www/php
 sudo chmod -R 755 /var/www/php
 
 cat <<'EOF' | sudo tee /etc/apache2/sites-available/php.conf
 <VirtualHost *:80>
-    DocumentRoot /var/www/php
+    DocumentRoot /var/www/php/public
 
-    <Directory /var/www/php>
+    <Directory /var/www/php/public>
             Options -Indexes +FollowSymLinks +MultiViews
             AllowOverride All
             Require all granted
