@@ -142,6 +142,15 @@ sudo apt-get update
 sudo apt-get install -y eza
 
 # ---
+cd "/tmp"
+wget https://github.com/axllent/mailpit/releases/download/v1.21.1/mailpit-linux-amd64.tar.gz -O "./mailpit-linux-amd64.tar.gz"
+mkdir -p ./mailpit-linux-amd64
+tar -xf ./mailpit-linux-amd64.tar.gz -C ./mailpit-linux-amd64
+sudo mv ./mailpit-linux-amd64/mailpit /usr/local/bin/mailpit
+rm -rf ./mailpit-linux-amd64 ./mailpit-linux-amd64.tar.gz
+sudo chmod +x /usr/local/bin/mailpit
+cd -
+
 cat <<'EOF' | sudo tee /etc/systemd/system/mailpit.service
 [Unit]
 Description=An email testing tool capturing emails from your application during development.
