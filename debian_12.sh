@@ -198,7 +198,7 @@ sudo systemctl restart mariadb
 
 # ---
 sudo flatpak install -y flathub io.github.zen_browser.zen
-xdg-mime default zen-browser.desktop x-scheme-handler/http
-xdg-mime default zen-browser.desktop x-scheme-handler/https
-xdg-mime default zen-browser.desktop text/html
-xdg-settings set default-web-browser zen-browser.desktop
+xdg-mime default io.github.zen_browser.zen.desktop x-scheme-handler/http
+xdg-mime default io.github.zen_browser.zen.desktop x-scheme-handler/https
+xdg-mime default io.github.zen_browser.zen.desktop text/html
+xdg-settings set default-web-browser io.github.zen_browser.zen.desktop
