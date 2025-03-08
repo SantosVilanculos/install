@@ -8,7 +8,7 @@ curl -sSfL https://raw.githubusercontent.com/SantosVilanculos/install/main/debia
 ---
 
 ```sh
-curl -sSfL https://raw.githubusercontent.com/SantosVilanculos/install/main/ubuntu_24.sh | sudo sh
+curl -sSfL https://raw.githubusercontent.com/SantosVilanculos/install/main/ubuntu/noble.sh | sudo sh
 ```
 
 ---
