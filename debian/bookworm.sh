@@ -60,6 +60,8 @@ sudo apt-get install -y zsh
 sudo chsh -s "/usr/bin/zsh"
 
 # ---
+
+sudo apt-get install -y apt-transport-https
 sudo apt-get install -y build-essential
 sudo apt-get install -y ca-certificates
 sudo apt-get install -y chrome-gnome-shell
@@ -76,6 +78,7 @@ sudo apt-get install -y gpg
 sudo apt-get install -y java-common
 sudo apt-get install -y jq
 sudo apt-get install -y libnss3-tools
+sudo apt-get install -y lsb-release
 sudo apt-get install -y maim
 sudo apt-get install -y net-tools
 sudo apt-get install -y ntfs-3g
@@ -127,12 +130,6 @@ sudo dpkg -i ./gcm-linux_amd64.2.6.0.deb
 cd -
 
 # ---
-sudo apt-get install -y \
-  software-properties-common \
-  lsb-release \
-  apt-transport-https \
-  ca-certificates
-
 sudo wget "https://packages.sury.org/php/apt.gpg" -O "/etc/apt/trusted.gpg.d/php.gpg"
 
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee "/etc/apt/sources.list.d/php.list"
@@ -160,8 +157,6 @@ sudo sed -i 's/^bind-address\s*=\s*127\.0\.0\.1/bind-address = 0.0.0.0/' /etc/my
 sudo systemctl restart mariadb
 
 # ---
-
-sudo apt install curl ca-certificates
 sudo install -d /usr/share/postgresql-common/pgdg
 sudo curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
 sudo sh -c 'echo "deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
@@ -169,7 +164,6 @@ sudo apt update
 sudo apt -y install postgresql
 
 # ---
-sudo apt-get install lsb-release curl gpg
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 sudo chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
