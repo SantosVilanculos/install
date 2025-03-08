@@ -2,17 +2,17 @@
 [![license](https://img.shields.io/github/license/SantosVilanculos/install)](https://github.com/SantosVilanculos/install/blob/main/LICENSE)
 
 ```sh
-curl -sSfL https://raw.githubusercontent.com/SantosVilanculos/install/main/debian_12.sh | sh
+curl -sSfL https://raw.githubusercontent.com/SantosVilanculos/install/main/debian_12.sh | sudo sh
 ```
 
 ---
 
 ```sh
-curl -sSfL https://raw.githubusercontent.com/SantosVilanculos/install/main/ubuntu_24.sh | sh
+curl -sSfL https://raw.githubusercontent.com/SantosVilanculos/install/main/ubuntu_24.sh | sudo sh
 ```
 
 ---
 
 ```sh
-curl -sSfL https://raw.githubusercontent.com/SantosVilanculos/install/main/ubuntu_server_22.sh | sh
+curl -sSfL https://raw.githubusercontent.com/SantosVilanculos/install/main/ubuntu_server_22.sh | sudo sh
 ```
