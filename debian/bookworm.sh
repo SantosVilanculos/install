@@ -64,15 +64,12 @@ sudo chsh -s "/usr/bin/zsh"
 sudo apt-get install -y apt-transport-https
 sudo apt-get install -y build-essential
 sudo apt-get install -y ca-certificates
-sudo apt-get install -y chrome-gnome-shell
 sudo apt-get install -y curl
 sudo apt-get install -y fd-find
 sudo apt-get install -y ffmpeg
 sudo apt-get install -y fzf
 sudo apt-get install -y gh
 sudo apt-get install -y git
-sudo apt-get install -y gnome-shell-extensions
-sudo apt-get install -y gnome-tweaks
 sudo apt-get install -y gparted
 sudo apt-get install -y gpg
 sudo apt-get install -y java-common
@@ -96,7 +93,14 @@ sudo apt-get install -y wget
 sudo apt-get install -y xclip
 sudo apt-get install -y xsel
 sudo apt-get install -y zip
+
+# ---
+sudo apt-get install -y chrome-gnome-shell
+sudo apt-get install -y gnome-shell-extensions
+sudo apt-get install -y gnome-tweaks
 sudo flatpak install -y flathub com.mattjakeman.ExtensionManager
+
+# ---
 sudo flatpak install -y flathub it.mijorus.gearlever
 
 # ---
