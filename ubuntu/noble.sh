@@ -116,7 +116,7 @@ cd -
 
 cat <<'EOF' | sudo tee /etc/systemd/system/mailpit.service
 [Unit]
-Description=Mailpit is an email testing tool for developers
+Description=An email testing tool capturing emails from your application during development.
 
 [Service]
 ExecStart=/usr/local/bin/mailpit
