@@ -7,11 +7,6 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 # ---
-# sudo dpkg --add-architecture i386
-# sudo apt-get update
-# sudo apt-get dist-upgrade -y
-
-# ---
 sudo apt-get install -y zsh
 sudo chsh -s "/usr/bin/zsh"
 
