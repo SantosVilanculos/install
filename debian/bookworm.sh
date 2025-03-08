@@ -46,7 +46,6 @@ deb http://deb.debian.org/debian bookworm-updates main contrib non-free non-free
 deb-src http://deb.debian.org/debian bookworm-updates main contrib non-free non-free-firmware
 EOF
 
-# ---
 sudo apt-get update
 sudo apt-get upgrade -y
 
@@ -58,16 +57,12 @@ sudo apt-get upgrade -y
 # ---
 sudo apt-get install -y libfuse2
 sudo apt-get install -y flatpak
-sudo apt-get install -y gnome-software-plugin-flatpak
 sudo flatpak remote-add --if-not-exists flathub "https://dl.flathub.org/repo/flathub.flatpakrepo"
+sudo apt-get install -y gnome-software-plugin-flatpak
 
 # ---
 sudo apt-get install -y zsh
 sudo chsh -s "/usr/bin/zsh"
-
-# ---
-sudo apt-get install -y tmux
-sudo apt-get install -y vim
 
 # ---
 sudo apt-get install -y build-essential
@@ -95,7 +90,9 @@ sudo apt-get install -y qt5-wayland
 sudo apt-get install -y qt6-wayland
 sudo apt-get install -y ripgrep
 sudo apt-get install -y software-properties-common
+sudo apt-get install -y tmux
 sudo apt-get install -y unzip
+sudo apt-get install -y vim
 sudo apt-get install -y vlc
 sudo apt-get install -y wget
 sudo apt-get install -y xclip
@@ -112,22 +109,6 @@ sudo apt-get install -y policykit-1-gnome
 sudo apt-get install -y rofi
 
 # ---
-cd "/tmp"
-
-wget "https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.6.0/gcm-linux_amd64.2.6.0.deb" -O ./gcm-linux_amd64.2.6.0.deb
-sudo dpkg -i ./gcm-linux_amd64.2.6.0.deb
-
-cd -
-
-# ---
-cd "/tmp"
-
-wget "https://github.com/fastfetch-cli/fastfetch/releases/download/2.20.1/fastfetch-linux-amd64.deb" -O ./fastfetch-linux-amd64.deb
-sudo dpkg -i ./fastfetch-linux-amd64.deb
-
-cd -
-
-# ---
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 
 # ---
@@ -137,6 +118,20 @@ echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable
 sudo chmod 644 /etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list
 sudo apt-get update
 sudo apt-get install -y eza
+
+# ---
+cd "/tmp"
+wget "https://github.com/fastfetch-cli/fastfetch/releases/download/2.20.1/fastfetch-linux-amd64.deb" -O ./fastfetch-linux-amd64.deb
+sudo dpkg -i ./fastfetch-linux-amd64.deb
+cd -
+
+# ---
+cd "/tmp"
+wget "https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.6.0/gcm-linux_amd64.2.6.0.deb" -O ./gcm-linux_amd64.2.6.0.deb
+sudo dpkg -i ./gcm-linux_amd64.2.6.0.deb
+cd -
+
+# ---
 
 # ---
 sudo add-apt-repository -y ppa:ondrej/php
