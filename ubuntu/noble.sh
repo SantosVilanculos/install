@@ -110,7 +110,7 @@ wget https://github.com/axllent/mailpit/releases/download/v1.21.1/mailpit-linux-
 mkdir -p ./mailpit-linux-amd64
 tar -xf ./mailpit-linux-amd64.tar.gz -C ./mailpit-linux-amd64
 sudo mv ./mailpit-linux-amd64/mailpit /usr/local/bin/mailpit
-rm -rf ./mailpit-linux-amd64 ./mailpit-linux-amd64.tar.gz
+rm -rf ./mailpit-linux-amd64
 sudo chmod +x /usr/local/bin/mailpit
 cd -
 
