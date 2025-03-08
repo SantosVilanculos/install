@@ -2,7 +2,7 @@
 [![license](https://img.shields.io/github/license/SantosVilanculos/install)](https://github.com/SantosVilanculos/install/blob/main/LICENSE)
 
 ```sh
-curl -sSfL https://raw.githubusercontent.com/SantosVilanculos/install/main/debian_12.sh | sudo sh
+curl -sSfL https://raw.githubusercontent.com/SantosVilanculos/install/main/debian/bookworm.sh | sudo sh
 ```
 
 ---
