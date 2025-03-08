@@ -127,13 +127,20 @@ sudo dpkg -i ./gcm-linux_amd64.2.6.0.deb
 cd -
 
 # ---
+sudo apt-get install -y \
+  software-properties-common \
+  lsb-release \
+  apt-transport-https \
+  ca-certificates
 
-# ---
-sudo add-apt-repository -y ppa:ondrej/php
-sudo apt-get update
+sudo wget "https://packages.sury.org/php/apt.gpg" -O "/etc/apt/trusted.gpg.d/php.gpg"
+
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee "/etc/apt/sources.list.d/php.list"
+
+sudo apt update
 
 sudo apt-get install -y --ignore-missing \
-  php8.2 php8.2-{cli,common,fpm,mysql,sqlite3,pgsql,zip,gd,mbstring,curl,xml,bcmath,tokenizer,intl,tidy,imagick,mcrypt}
+  php8.3 php8.3-{cli,common,fpm,mysql,sqlite3,pgsql,zip,gd,mbstring,curl,xml,bcmath,tokenizer,intl,tidy,imagick,mcrypt}
 
 # ---
 sudo apt-get install -y apache2 libapache2-mod-php
