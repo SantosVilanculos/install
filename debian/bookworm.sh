@@ -50,11 +50,6 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 # ---
-# sudo dpkg --add-architecture i386
-# sudo apt-get update
-# sudo apt-get dist-upgrade -y
-
-# ---
 sudo apt-get install -y libfuse2
 sudo apt-get install -y flatpak
 sudo flatpak remote-add --if-not-exists flathub "https://dl.flathub.org/repo/flathub.flatpakrepo"
