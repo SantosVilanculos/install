@@ -83,12 +83,14 @@ sudo apt-get install -y openssh-client
 sudo apt-get install -y openssl
 sudo apt-get install -y ripgrep
 sudo apt-get install -y software-properties-common
+sudo apt-get install -y stow
 sudo apt-get install -y tmux
 sudo apt-get install -y unzip
 sudo apt-get install -y vim
 sudo apt-get install -y vlc
 sudo apt-get install -y wget
 sudo apt-get install -y xclip
+sudo apt-get install -y xdotool
 sudo apt-get install -y xsel
 sudo apt-get install -y zip
 
@@ -104,9 +106,9 @@ sudo flatpak install -y flathub it.mijorus.gearlever
 # ---
 sudo apt-get install -y i3
 sudo apt-get install -y dmenu
+sudo apt-get install -y rofi
 sudo apt-get install -y nitrogen
 sudo apt-get install -y policykit-1-gnome
-sudo apt-get install -y rofi
 
 # ---
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
