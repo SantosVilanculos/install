@@ -12,6 +12,7 @@ sudo chsh -s "/usr/bin/zsh"
 
 # ---
 sudo add-apt-repository universe
+sudo apt-get update
 sudo apt-get install libfuse2t64
 sudo apt-get install -y flatpak
 sudo apt-get install -y gnome-software-plugin-flatpak
